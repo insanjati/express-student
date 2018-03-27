@@ -3,13 +3,13 @@ var autoIncrement = require('mongoose-auto-increment');
  
 autoIncrement.initialize(mongoose.connection);
 
-var GuruSchema = new mongoose.Schema({  
+var StudentSchema = new mongoose.Schema({  
     name: String,
     batch: String,
     age: Number,
     gender: String
 });
 
-module.exports = mongoose.model('Guru', GuruSchema);
+module.exports = mongoose.model('Student', StudentSchema);
 
-GuruSchema.plugin(autoIncrement.plugin, 'Guru');
+StudentSchema.plugin(autoIncrement.plugin, 'Student');
